@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="color-scheme" content="light" />
+    <meta
+      name="description"
+      content="Anonymous supplementary material with VoiceShield and baseline audio comparisons and system demonstrations."
+    />
+    <title>VoiceShield: Practical and Perceptually Transparent Real-Time Voice Protection against AI Cloning</title>
+    <link rel="stylesheet" href="assets/style.css?v=20260817-unified-samples-3" />
+    <script src="assets/clone-data.js?v=20260817-elevenlabs-1" defer></script>
+    <script src="assets/clone-evaluation.js?v=20260817-elevenlabs-1" defer></script>
+    <script src="assets/app.js?v=seekable-blob-20260803" defer></script>
+  </head>
+  <body>
+    <main id="top">
+      <header class="paper-header shell" aria-labelledby="page-title">
+        <p class="submission-note">Anonymous submission · Supplementary material</p>
+        <h1 id="page-title">VoiceShield: Practical and Perceptually Transparent Real-Time Voice Protection against AI Cloning</h1>
+        <p class="anonymous-authors">Anonymous authors</p>
+
+        <div class="abstract-block">
+          <h2>Abstract</h2>
+          <div class="abstract-copy">
+            <p>
+              Recent advances in AI voice cloning have made it possible to reproduce a
+              person's voice from only a few seconds of speech, enabling scalable
+              impersonation for fraud, social engineering, misinformation, and other forms
+              of identity abuse. Existing anti-cloning defenses, however, often rely on
+              expensive per-utterance optimization and waveform-level adversarial
+              perturbations. These approaches incur substantial computational cost, making
+              real-time protection impractical, while potentially introducing perceptible
+              artifacts and generalizing poorly to emerging cloning systems.
+            </p>
+            <p>
+              In this paper, we present VoiceShield, a practical and perceptually
+              transparent voice-protection system for both offline and real-time speech. Our
+              key insight is to leverage the structural prior of pretrained generative speech
+              models: rather than perturbing the waveform directly, VoiceShield operates in a
+              compact latent space where modifications are constrained toward
+              speech-supported acoustic structure. A lightweight transformer generates
+              identity-disrupting perturbations in a single forward pass, while an
+              identity-aware soft mask concentrates modifications on features most relevant
+              to speaker identity. We evaluate VoiceShield against seven state-of-the-art
+              defense baselines across ten recent voice-cloning systems spanning both open-
+              and closed-source models. VoiceShield consistently delivers the strongest
+              protection effectiveness and the best perceptual quality among all evaluated
+              defenses, substantially advancing the overall protection-quality trade-off, as
+              confirmed by both objective metrics and our listening study. We further package
+              VoiceShield as deployable software for desktop, mobile, and standalone edge
+              devices, demonstrating low-latency operation and practical integration with
+              existing voice and audio applications.
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <section id="audio" class="section shell" aria-labelledby="audio-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-number">Audio samples</p>
+            <h2 id="audio-title">Original and protected speech</h2>
+          </div>
+          <p>
+            We selected four utterances from the LibriTTS dataset. Each column
+            contains one source utterance, all seven baseline outputs, and the corresponding
+            VoiceShield output. Playback is limited to one clip at a time for easier comparison.
+          </p>
+        </div>
+
+        <aside class="listening-note" aria-label="Listening recommendation">
+          <span aria-hidden="true">◎</span>
+          <p><strong>For the clearest comparison,</strong> use headphones at a comfortable, fixed volume.</p>
+        </aside>
+
+        <div class="audio-table" role="table" aria-label="Comparative audio samples">
+          <div class="audio-table-header" role="row">
+            <span role="columnheader">Method</span>
+            <span role="columnheader">Sample 01</span>
+            <span role="columnheader">Sample 02</span>
+            <span role="columnheader">Sample 03</span>
+            <span role="columnheader">Sample 04</span>
+          </div>
+
+          <div class="audio-row" role="row">
+            <div class="method-id" role="rowheader"><span>Original</span></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 01</span><audio controls preload="none" aria-label="Original, Sample 01"><source src="audio/sample-01-original.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 02</span><audio controls preload="none" aria-label="Original, Sample 02"><source src="audio/sample-02-original.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 03</span><audio controls preload="none" aria-label="Original, Sample 03"><source src="audio/sample-03-original.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 04</span><audio controls preload="none" aria-label="Original, Sample 04"><source src="audio/sample-04-original.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+          </div>
+
+          <div class="audio-row" role="row">
+            <div class="method-id" role="rowheader"><span>McAdams</span></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 01</span><audio controls preload="none" aria-label="McAdams, Sample 01"><source src="audio/sample-01-mcadams.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 02</span><audio controls preload="none" aria-label="McAdams, Sample 02"><source src="audio/sample-02-mcadams.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 03</span><audio controls preload="none" aria-label="McAdams, Sample 03"><source src="audio/sample-03-mcadams.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 04</span><audio controls preload="none" aria-label="McAdams, Sample 04"><source src="audio/sample-04-mcadams.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+          </div>
+
+          <div class="audio-row" role="row">
+            <div class="method-id" role="rowheader"><span>AntiFake</span></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 01</span><audio controls preload="none" aria-label="AntiFake, Sample 01"><source src="audio/sample-01-antifake.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 02</span><audio controls preload="none" aria-label="AntiFake, Sample 02"><source src="audio/sample-02-antifake.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 03</span><audio controls preload="none" aria-label="AntiFake, Sample 03"><source src="audio/sample-03-antifake.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 04</span><audio controls preload="none" aria-label="AntiFake, Sample 04"><source src="audio/sample-04-antifake.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+          </div>
+
+          <div class="audio-row" role="row">
+            <div class="method-id" role="rowheader"><span>SafeSpeech</span></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 01</span><audio controls preload="none" aria-label="SafeSpeech, Sample 01"><source src="audio/sample-01-safespeech.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 02</span><audio controls preload="none" aria-label="SafeSpeech, Sample 02"><source src="audio/sample-02-safespeech.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 03</span><audio controls preload="none" aria-label="SafeSpeech, Sample 03"><source src="audio/sample-03-safespeech.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 04</span><audio controls preload="none" aria-label="SafeSpeech, Sample 04"><source src="audio/sample-04-safespeech.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+          </div>
+
+          <div class="audio-row" role="row">
+            <div class="method-id" role="rowheader"><span>POP</span></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 01</span><audio controls preload="none" aria-label="POP, Sample 01"><source src="audio/sample-01-pop.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 02</span><audio controls preload="none" aria-label="POP, Sample 02"><source src="audio/sample-02-pop.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 03</span><audio controls preload="none" aria-label="POP, Sample 03"><source src="audio/sample-03-pop.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 04</span><audio controls preload="none" aria-label="POP, Sample 04"><source src="audio/sample-04-pop.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+          </div>
+
+          <div class="audio-row" role="row">
+            <div class="method-id" role="rowheader"><span>E2E-VGuard</span></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 01</span><audio controls preload="none" aria-label="E2E-VGuard, Sample 01"><source src="audio/sample-01-e2e.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 02</span><audio controls preload="none" aria-label="E2E-VGuard, Sample 02"><source src="audio/sample-02-e2e.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 03</span><audio controls preload="none" aria-label="E2E-VGuard, Sample 03"><source src="audio/sample-03-e2e.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 04</span><audio controls preload="none" aria-label="E2E-VGuard, Sample 04"><source src="audio/sample-04-e2e.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+          </div>
+
+          <div class="audio-row" role="row">
+            <div class="method-id" role="rowheader"><span>VoiceBlock</span></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 01</span><audio controls preload="none" aria-label="VoiceBlock, Sample 01"><source src="audio/sample-01-voiceblock.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 02</span><audio controls preload="none" aria-label="VoiceBlock, Sample 02"><source src="audio/sample-02-voiceblock.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 03</span><audio controls preload="none" aria-label="VoiceBlock, Sample 03"><source src="audio/sample-03-voiceblock.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 04</span><audio controls preload="none" aria-label="VoiceBlock, Sample 04"><source src="audio/sample-04-voiceblock.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+          </div>
+
+          <div class="audio-row" role="row">
+            <div class="method-id" role="rowheader"><span>RoVo</span></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 01</span><audio controls preload="none" aria-label="RoVo, Sample 01"><source src="audio/sample-01-rovo.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 02</span><audio controls preload="none" aria-label="RoVo, Sample 02"><source src="audio/sample-02-rovo.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 03</span><audio controls preload="none" aria-label="RoVo, Sample 03"><source src="audio/sample-03-rovo.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell" role="cell"><span class="mobile-label">Sample 04</span><audio controls preload="none" aria-label="RoVo, Sample 04"><source src="audio/sample-04-rovo.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+          </div>
+
+          <div class="audio-row protected-row" role="row">
+            <div class="method-id protected" role="rowheader"><span>VoiceShield</span></div>
+            <div class="audio-cell protected" role="cell"><span class="mobile-label">Sample 01</span><audio controls preload="none" aria-label="VoiceShield, Sample 01"><source src="audio/sample-01-voiceshield.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell protected" role="cell"><span class="mobile-label">Sample 02</span><audio controls preload="none" aria-label="VoiceShield, Sample 02"><source src="audio/sample-02-voiceshield.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell protected" role="cell"><span class="mobile-label">Sample 03</span><audio controls preload="none" aria-label="VoiceShield, Sample 03"><source src="audio/sample-03-voiceshield.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+            <div class="audio-cell protected" role="cell"><span class="mobile-label">Sample 04</span><audio controls preload="none" aria-label="VoiceShield, Sample 04"><source src="audio/sample-04-voiceshield.wav" type="audio/wav" />Your browser does not support audio playback.</audio></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="clone-evaluation" class="section shell clone-evaluation" aria-labelledby="clone-title">
+        <div class="section-heading clone-section-heading">
+          <div>
+            <p class="section-number">Clone evaluation</p>
+            <h2 id="clone-title">TTS clone outputs and SIM scores</h2>
+          </div>
+        </div>
+
+        <aside class="metric-note">
+          <p class="metric-label">Evaluation metric</p>
+          <p>
+            <strong>Speaker Similarity (SIM)</strong> is a commonly used metric in AI voice
+            cloning to quantify the cloning capacity of a model by measuring cosine similarity
+            between original and cloned speech embeddings.
+          </p>
+        </aside>
+
+        <div class="table-scroll" tabindex="0" aria-label="Scrollable TTS clone comparison table">
+          <div id="clone-table" class="clone-table" role="table" aria-label="TTS clone outputs and SIM scores"></div>
+        </div>
+      </section>
+
+      <section id="demos" class="section section-tinted">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-number">Video demos</p>
+              <h2 id="demo-title">System demonstrations</h2>
+            </div>
+            <p>
+              The demonstrations show offline and real-time operation across three
+              deployment platforms.
+            </p>
+          </div>
+
+          <div class="demo-grid" aria-labelledby="demo-title">
+            <article class="demo-card">
+              <div class="video-preview">
+                <video class="demo-video" muted preload="metadata" playsinline aria-hidden="true" tabindex="-1">
+                  <source src="video/desktop-web-demo.mp4?v=web-demo-20260805-3" type="video/mp4" />
+                </video>
+                <button
+                  class="video-open-button"
+                  type="button"
+                  data-video-src="video/desktop-web-demo.mp4?v=web-demo-20260805-3"
+                  data-video-title="Desktop / Web"
+                  aria-haspopup="dialog"
+                  aria-controls="video-dialog"
+                >
+                  <span class="video-play-mark" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" focusable="false">
+                      <path d="M9 6.5 18 12l-9 5.5v-11Z" />
+                    </svg>
+                  </span>
+                  <span>Play</span>
+                </button>
+              </div>
+              <div class="demo-card-copy">
+                <p class="demo-index">Demo 01</p>
+                <h3>Desktop / Web</h3>
+                <p>Browser-based listening and live protection workflow.</p>
+                <span class="mode-tag">Offline + real-time</span>
+              </div>
+            </article>
+
+            <article class="demo-card">
+              <div class="video-preview">
+                <video class="demo-video" muted preload="metadata" playsinline aria-hidden="true" tabindex="-1">
+                  <source src="video/mobile-demo.mp4?v=mobile-demo-20260805" type="video/mp4" />
+                </video>
+                <button
+                  class="video-open-button"
+                  type="button"
+                  data-video-src="video/mobile-demo.mp4?v=mobile-demo-20260805"
+                  data-video-title="Mobile"
+                  aria-haspopup="dialog"
+                  aria-controls="video-dialog"
+                >
+                  <span class="video-play-mark" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" focusable="false">
+                      <path d="M9 6.5 18 12l-9 5.5v-11Z" />
+                    </svg>
+                  </span>
+                  <span>Play</span>
+                </button>
+              </div>
+              <div class="demo-card-copy">
+                <p class="demo-index">Demo 02</p>
+                <h3>Mobile</h3>
+                <p>On-device and connected mobile usage scenarios.</p>
+                <span class="mode-tag">Offline + real-time</span>
+              </div>
+            </article>
+
+            <article class="demo-card">
+              <div class="video-placeholder" aria-label="Jetson Orin Nano demonstration coming soon">
+                <span class="play-mark" aria-hidden="true">▶</span>
+                <span>Video coming soon</span>
+              </div>
+              <div class="demo-card-copy">
+                <p class="demo-index">Demo 03</p>
+                <h3>Jetson Orin Nano</h3>
+                <p>Edge deployment under resource-constrained conditions.</p>
+                <span class="mode-tag">Real-time</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="notes" class="section shell notes" aria-labelledby="notes-title">
+        <div>
+          <p class="section-number">Artifact notes</p>
+          <h2 id="notes-title">About these samples</h2>
+        </div>
+        <div class="notes-grid">
+          <p>
+            Every column contains the same source utterance and its protected outputs.
+          </p>
+          <p>
+            All files are mono, 16-bit PCM WAV recordings. Original and VoiceShield
+            clips are 24 kHz; baseline outputs retain their method-produced native
+            sampling rate and duration.
+          </p>
+          <p>
+            All seven baseline methods evaluated in the paper are included here.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="video-dialog" class="video-dialog" aria-labelledby="video-dialog-title">
+      <div class="video-dialog-panel">
+        <div class="video-dialog-header">
+          <div>
+            <p>System demonstration</p>
+            <h2 id="video-dialog-title">Desktop / Web</h2>
+          </div>
+          <button id="video-dialog-close" class="video-dialog-close" type="button" aria-label="Close video">
+            Close <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <p id="video-dialog-status" class="video-dialog-status" role="status" aria-live="polite" hidden></p>
+        <video id="video-dialog-player" class="video-dialog-player" controls preload="metadata" playsinline>
+          Your browser does not support MP4 video playback.
+        </video>
+      </div>
+    </dialog>
+
+    <footer>
+      <div class="shell footer-inner">
+        <span>VoiceShield · Anonymous supplementary material</span>
+        <span>No analytics · No external resources</span>
+      </div>
+    </footer>
+  </body>
+</html>

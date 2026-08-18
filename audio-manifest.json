@@ -1,0 +1,425 @@
+{
+  "artifact": "VoiceShield anonymous supplementary material",
+  "sample_selection": "Four selected LibriTTS utterances (source IDs 6, 1, 4, and 10)",
+  "methods": [
+    {
+      "key": "original",
+      "label": "Original"
+    },
+    {
+      "key": "mcadams",
+      "label": "McAdams"
+    },
+    {
+      "key": "antifake",
+      "label": "AntiFake"
+    },
+    {
+      "key": "safespeech",
+      "label": "SafeSpeech"
+    },
+    {
+      "key": "pop",
+      "label": "POP"
+    },
+    {
+      "key": "e2e",
+      "label": "E2E-VGuard"
+    },
+    {
+      "key": "voiceblock",
+      "label": "VoiceBlock"
+    },
+    {
+      "key": "rovo",
+      "label": "RoVo"
+    },
+    {
+      "key": "voiceshield",
+      "label": "VoiceShield"
+    }
+  ],
+  "format": "Mono, 16-bit PCM WAV. Each method retains its native sampling rate and method-produced duration.",
+  "samples": [
+    {
+      "id": "01",
+      "clips": {
+        "original": {
+          "path": "audio/sample-01-original.wav",
+          "bytes": 910604,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 455280,
+          "duration_seconds": 18.97,
+          "sha256": "4809afb276e5b28520adf10ce8e4492f716b53d4c264fb223c0b0a4229c33e7e"
+        },
+        "mcadams": {
+          "path": "audio/sample-01-mcadams.wav",
+          "bytes": 607084,
+          "sample_rate_hz": 16000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 303520,
+          "duration_seconds": 18.97,
+          "sha256": "916b2700395e2f7bb6a2a7d5c94de7e4f3b3fc4e81bacf8361cf891700efbcb4"
+        },
+        "antifake": {
+          "path": "audio/sample-01-antifake.wav",
+          "bytes": 512044,
+          "sample_rate_hz": 16000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 256000,
+          "duration_seconds": 16.0,
+          "sha256": "c409034c32c4ebeb944153e66bb3b25bc32aff40523b92014156250c66f6a144"
+        },
+        "safespeech": {
+          "path": "audio/sample-01-safespeech.wav",
+          "bytes": 910604,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 455280,
+          "duration_seconds": 18.97,
+          "sha256": "4d98108182f418ea05ecc234dde892045ecb5f8d0f8fad6b25654b12c6ecc072"
+        },
+        "pop": {
+          "path": "audio/sample-01-pop.wav",
+          "bytes": 910604,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 455280,
+          "duration_seconds": 18.97,
+          "sha256": "878799f3988d56d546fa6f059fb32d2785ca1434cdd90a9fca2f0e363ebcf696"
+        },
+        "e2e": {
+          "path": "audio/sample-01-e2e.wav",
+          "bytes": 910604,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 455280,
+          "duration_seconds": 18.97,
+          "sha256": "8ed15917c1523ab84abf99f273b1f19d699e0ad7358a4d762047ebcfb6306759"
+        },
+        "voiceblock": {
+          "path": "audio/sample-01-voiceblock.wav",
+          "bytes": 607084,
+          "sample_rate_hz": 16000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 303520,
+          "duration_seconds": 18.97,
+          "sha256": "feba2b12de0fc25e9d14b89619defc72aa1b4472f0f472bb0cdf404337367f77"
+        },
+        "rovo": {
+          "path": "audio/sample-01-rovo.wav",
+          "bytes": 910604,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 455280,
+          "duration_seconds": 18.97,
+          "sha256": "1cfd3f0abe2ae0e351044b9c2954998dc67bc2a1e4f9a19cbfcfdbe5227b2270"
+        },
+        "voiceshield": {
+          "path": "audio/sample-01-voiceshield.wav",
+          "bytes": 910604,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 455280,
+          "duration_seconds": 18.97,
+          "sha256": "beae35c55e194c43c3c5b4886bcb2abfc3b07194a55aefde6f32e9bf1b5c195f"
+        }
+      }
+    },
+    {
+      "id": "02",
+      "clips": {
+        "original": {
+          "path": "audio/sample-02-original.wav",
+          "bytes": 1163084,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 581520,
+          "duration_seconds": 24.23,
+          "sha256": "5f1bf9febc250ebff2add77f65c10cb650014366e786b1a2ca9b0ce285cbd9bc"
+        },
+        "mcadams": {
+          "path": "audio/sample-02-mcadams.wav",
+          "bytes": 775404,
+          "sample_rate_hz": 16000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 387680,
+          "duration_seconds": 24.23,
+          "sha256": "8e2717e6ae4482ea32b149ddeb6eb4e936bdb5cfd345ae80f1875a0593ccbc5b"
+        },
+        "antifake": {
+          "path": "audio/sample-02-antifake.wav",
+          "bytes": 723884,
+          "sample_rate_hz": 16000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 361920,
+          "duration_seconds": 22.62,
+          "sha256": "f73085b10c3ff14f84922702c7a269f2bb8d4d20f158dc2b30d9b49f94826220"
+        },
+        "safespeech": {
+          "path": "audio/sample-02-safespeech.wav",
+          "bytes": 1163084,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 581520,
+          "duration_seconds": 24.23,
+          "sha256": "3eeda3656f8b48d5959e527471d35ceded42f323e3a49a45f2becba5d8f2c32b"
+        },
+        "pop": {
+          "path": "audio/sample-02-pop.wav",
+          "bytes": 1163084,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 581520,
+          "duration_seconds": 24.23,
+          "sha256": "8aa0b38341bd4266d35b22d28b9a151547e94f96d836dbad46bb9539dccfd48d"
+        },
+        "e2e": {
+          "path": "audio/sample-02-e2e.wav",
+          "bytes": 1163084,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 581520,
+          "duration_seconds": 24.23,
+          "sha256": "1b3fccd3fa6d580973e8f5184a7dc9a72ba52db7448292fa62222f5cbb29106b"
+        },
+        "voiceblock": {
+          "path": "audio/sample-02-voiceblock.wav",
+          "bytes": 775404,
+          "sample_rate_hz": 16000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 387680,
+          "duration_seconds": 24.23,
+          "sha256": "4bb8ccc2a0ee24d2e7fead807cce1203d598f433f4a161b4e2dca0d9fe110414"
+        },
+        "rovo": {
+          "path": "audio/sample-02-rovo.wav",
+          "bytes": 1163084,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 581520,
+          "duration_seconds": 24.23,
+          "sha256": "159dc2697dff842a43b871b681b96fb312e65a048229dbe24b280bc1115eab57"
+        },
+        "voiceshield": {
+          "path": "audio/sample-02-voiceshield.wav",
+          "bytes": 1163084,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 581520,
+          "duration_seconds": 24.23,
+          "sha256": "8e4a1e2cca0b762614118890541691bf0dd71e4fa7a9e26f1b536f6de7be20a4"
+        }
+      }
+    },
+    {
+      "id": "03",
+      "clips": {
+        "original": {
+          "path": "audio/sample-03-original.wav",
+          "bytes": 875084,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 437520,
+          "duration_seconds": 18.23,
+          "sha256": "e2f021be5f4a111819db35fc24c463311e30fb34f09052e536a07a9b87d8a4b2"
+        },
+        "mcadams": {
+          "path": "audio/sample-03-mcadams.wav",
+          "bytes": 583404,
+          "sample_rate_hz": 16000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 291680,
+          "duration_seconds": 18.23,
+          "sha256": "6b9b7b45dfacce08ad4e0bfe0229b123c49e9e90c234e18dbf30e0098e08ad40"
+        },
+        "antifake": {
+          "path": "audio/sample-03-antifake.wav",
+          "bytes": 549164,
+          "sample_rate_hz": 16000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 274560,
+          "duration_seconds": 17.16,
+          "sha256": "67cb23dc2be4a7a1cfc78dff1289db0ece0630249df78214982715e4ef5de033"
+        },
+        "safespeech": {
+          "path": "audio/sample-03-safespeech.wav",
+          "bytes": 875084,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 437520,
+          "duration_seconds": 18.23,
+          "sha256": "f20dfdaff245a625196ff47eebb2e242adc9d735094d8da8e3a1d8a08029c489"
+        },
+        "pop": {
+          "path": "audio/sample-03-pop.wav",
+          "bytes": 875084,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 437520,
+          "duration_seconds": 18.23,
+          "sha256": "552263598d82f32e43a9117a43ffae0040465aee9e0fd3138996ed6f23e40558"
+        },
+        "e2e": {
+          "path": "audio/sample-03-e2e.wav",
+          "bytes": 875084,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 437520,
+          "duration_seconds": 18.23,
+          "sha256": "6d88c8409352b786eb6081a02734e166aff200a1036bdc88c6bfd065502e8f30"
+        },
+        "voiceblock": {
+          "path": "audio/sample-03-voiceblock.wav",
+          "bytes": 583404,
+          "sample_rate_hz": 16000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 291680,
+          "duration_seconds": 18.23,
+          "sha256": "39053ac2732ee6488330747a8f3fd0dbbd89481a6fce36b272eb4bf0015c989c"
+        },
+        "rovo": {
+          "path": "audio/sample-03-rovo.wav",
+          "bytes": 875084,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 437520,
+          "duration_seconds": 18.23,
+          "sha256": "fa9061d166f7668a8a5775be669bbabe84a3ecd70f0c92dbf963653a4b269fcf"
+        },
+        "voiceshield": {
+          "path": "audio/sample-03-voiceshield.wav",
+          "bytes": 875084,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 437520,
+          "duration_seconds": 18.23,
+          "sha256": "3a031fea2b4d48d0f120d7eaa575582fba1247ce78750d35eacef7f34f800eec"
+        }
+      }
+    },
+    {
+      "id": "04",
+      "clips": {
+        "original": {
+          "path": "audio/sample-04-original.wav",
+          "bytes": 723404,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 361680,
+          "duration_seconds": 15.07,
+          "sha256": "d7fb3a95b93d6a9ee6322177c9aeabdc067b399976e243cb01cef6f1b350faba"
+        },
+        "mcadams": {
+          "path": "audio/sample-04-mcadams.wav",
+          "bytes": 482284,
+          "sample_rate_hz": 16000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 241120,
+          "duration_seconds": 15.07,
+          "sha256": "f96c58a2058b49d0ace9068a49584c6ed575c060b184986a17aff1f2d6c4f336"
+        },
+        "antifake": {
+          "path": "audio/sample-04-antifake.wav",
+          "bytes": 463724,
+          "sample_rate_hz": 16000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 231840,
+          "duration_seconds": 14.49,
+          "sha256": "47297c3a20be9f820d52ee30b110e9c9e349409584ef767f42ec823b72326fd8"
+        },
+        "safespeech": {
+          "path": "audio/sample-04-safespeech.wav",
+          "bytes": 723404,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 361680,
+          "duration_seconds": 15.07,
+          "sha256": "84608d83a40a0bb32cfc74982e313d656378151e3d1a405fea705bf82241eced"
+        },
+        "pop": {
+          "path": "audio/sample-04-pop.wav",
+          "bytes": 723404,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 361680,
+          "duration_seconds": 15.07,
+          "sha256": "023505d610220a80b18c438c46b995d6560fd79fee0b4b8dcf4aeefee4fff010"
+        },
+        "e2e": {
+          "path": "audio/sample-04-e2e.wav",
+          "bytes": 723404,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 361680,
+          "duration_seconds": 15.07,
+          "sha256": "7ef92850fe95ac3563c10dd50fa2ced41f1da342bb7dc7365d82a0d2be57f1ce"
+        },
+        "voiceblock": {
+          "path": "audio/sample-04-voiceblock.wav",
+          "bytes": 482284,
+          "sample_rate_hz": 16000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 241120,
+          "duration_seconds": 15.07,
+          "sha256": "4a85d5635b3fa5658e6a240f2e7693fa2364dfe4ce6b6a4c31b15282d890dc86"
+        },
+        "rovo": {
+          "path": "audio/sample-04-rovo.wav",
+          "bytes": 723404,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 361680,
+          "duration_seconds": 15.07,
+          "sha256": "91fda767e3f70f808e7c2a6a8ddb5992305f92367f21a6ac79f8403bb2ef6b03"
+        },
+        "voiceshield": {
+          "path": "audio/sample-04-voiceshield.wav",
+          "bytes": 723404,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 361680,
+          "duration_seconds": 15.07,
+          "sha256": "24134b6334c55e5751ad25322052626b761068f8ac57ec3366d58630b461ea75"
+        }
+      }
+    }
+  ]
+}
