@@ -10,10 +10,10 @@
       content="Anonymous supplementary material with VoiceShield and baseline audio comparisons and system demonstrations."
     />
     <title>VoiceShield: Practical and Perceptually Transparent Real-Time Voice Protection against AI Cloning</title>
-    <link rel="stylesheet" href="assets/style.css?v=20260817-unified-samples-3" />
+    <link rel="stylesheet" href="assets/style.css?v=20260818-editorial-responsive-1" />
     <script src="assets/clone-data.js?v=20260817-elevenlabs-1" defer></script>
-    <script src="assets/clone-evaluation.js?v=20260817-elevenlabs-1" defer></script>
-    <script src="assets/app.js?v=seekable-blob-20260803" defer></script>
+    <script src="assets/clone-evaluation.js?v=20260818-responsive-1" defer></script>
+    <script src="assets/app.js?v=github-pages-range-20260818" defer></script>
   </head>
   <body>
     <main id="top">
@@ -34,8 +34,6 @@
               perturbations. These approaches incur substantial computational cost, making
               real-time protection impractical, while potentially introducing perceptible
               artifacts and generalizing poorly to emerging cloning systems.
-            </p>
-            <p>
               In this paper, we present VoiceShield, a practical and perceptually
               transparent voice-protection system for both offline and real-time speech. Our
               key insight is to leverage the structural prior of pretrained generative speech
@@ -57,6 +55,94 @@
           </div>
         </div>
       </header>
+
+      <section id="demos" class="section section-tinted" aria-labelledby="demo-title">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-number">Video demos</p>
+              <h2 id="demo-title">System demonstrations</h2>
+            </div>
+            <p>
+              The demonstrations show offline and real-time operation across three
+              deployment platforms.
+            </p>
+          </div>
+
+          <div class="demo-grid" aria-labelledby="demo-title">
+            <article class="demo-card">
+              <div class="video-preview">
+                <video class="demo-video" muted preload="metadata" playsinline aria-hidden="true" tabindex="-1">
+                  <source src="video/desktop-web-demo.mp4?v=web-demo-20260805-3" type="video/mp4" />
+                </video>
+                <button
+                  class="video-open-button"
+                  type="button"
+                  data-video-src="video/desktop-web-demo.mp4?v=web-demo-20260805-3"
+                  data-video-title="Desktop / Web"
+                  aria-haspopup="dialog"
+                  aria-controls="video-dialog"
+                >
+                  <span class="video-play-mark" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" focusable="false">
+                      <path d="M9 6.5 18 12l-9 5.5v-11Z" />
+                    </svg>
+                  </span>
+                  <span>Play</span>
+                </button>
+              </div>
+              <div class="demo-card-copy">
+                <p class="demo-index">Demo 01</p>
+                <h3>Desktop / Web</h3>
+                <p>Browser-based listening and live protection workflow.</p>
+                <span class="mode-tag">Offline + real-time</span>
+              </div>
+            </article>
+
+            <article class="demo-card">
+              <div class="video-preview">
+                <video class="demo-video" muted preload="metadata" playsinline aria-hidden="true" tabindex="-1">
+                  <source src="video/mobile-demo.mp4?v=mobile-demo-20260805" type="video/mp4" />
+                </video>
+                <button
+                  class="video-open-button"
+                  type="button"
+                  data-video-src="video/mobile-demo.mp4?v=mobile-demo-20260805"
+                  data-video-title="Mobile"
+                  aria-haspopup="dialog"
+                  aria-controls="video-dialog"
+                >
+                  <span class="video-play-mark" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" focusable="false">
+                      <path d="M9 6.5 18 12l-9 5.5v-11Z" />
+                    </svg>
+                  </span>
+                  <span>Play</span>
+                </button>
+              </div>
+              <div class="demo-card-copy">
+                <p class="demo-index">Demo 02</p>
+                <h3>Mobile</h3>
+                <p>On-device and connected mobile usage scenarios.</p>
+                <span class="mode-tag">Offline + real-time</span>
+              </div>
+            </article>
+
+            <article class="demo-card">
+              <div class="video-placeholder" aria-label="Jetson Orin Nano demonstration coming soon">
+                <span class="play-mark" aria-hidden="true">▶</span>
+                <span>Video coming soon</span>
+              </div>
+              <div class="demo-card-copy">
+                <p class="demo-index">Demo 03</p>
+                <h3>Jetson Orin Nano</h3>
+                <p>Edge deployment under resource-constrained conditions.</p>
+                <span class="mode-tag">Real-time</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
       <section id="audio" class="section shell" aria-labelledby="audio-title">
         <div class="section-heading">
@@ -181,94 +267,6 @@
         </div>
       </section>
 
-      <section id="demos" class="section section-tinted">
-        <div class="shell">
-          <div class="section-heading">
-            <div>
-              <p class="section-number">Video demos</p>
-              <h2 id="demo-title">System demonstrations</h2>
-            </div>
-            <p>
-              The demonstrations show offline and real-time operation across three
-              deployment platforms.
-            </p>
-          </div>
-
-          <div class="demo-grid" aria-labelledby="demo-title">
-            <article class="demo-card">
-              <div class="video-preview">
-                <video class="demo-video" muted preload="metadata" playsinline aria-hidden="true" tabindex="-1">
-                  <source src="video/desktop-web-demo.mp4?v=web-demo-20260805-3" type="video/mp4" />
-                </video>
-                <button
-                  class="video-open-button"
-                  type="button"
-                  data-video-src="video/desktop-web-demo.mp4?v=web-demo-20260805-3"
-                  data-video-title="Desktop / Web"
-                  aria-haspopup="dialog"
-                  aria-controls="video-dialog"
-                >
-                  <span class="video-play-mark" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" focusable="false">
-                      <path d="M9 6.5 18 12l-9 5.5v-11Z" />
-                    </svg>
-                  </span>
-                  <span>Play</span>
-                </button>
-              </div>
-              <div class="demo-card-copy">
-                <p class="demo-index">Demo 01</p>
-                <h3>Desktop / Web</h3>
-                <p>Browser-based listening and live protection workflow.</p>
-                <span class="mode-tag">Offline + real-time</span>
-              </div>
-            </article>
-
-            <article class="demo-card">
-              <div class="video-preview">
-                <video class="demo-video" muted preload="metadata" playsinline aria-hidden="true" tabindex="-1">
-                  <source src="video/mobile-demo.mp4?v=mobile-demo-20260805" type="video/mp4" />
-                </video>
-                <button
-                  class="video-open-button"
-                  type="button"
-                  data-video-src="video/mobile-demo.mp4?v=mobile-demo-20260805"
-                  data-video-title="Mobile"
-                  aria-haspopup="dialog"
-                  aria-controls="video-dialog"
-                >
-                  <span class="video-play-mark" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" focusable="false">
-                      <path d="M9 6.5 18 12l-9 5.5v-11Z" />
-                    </svg>
-                  </span>
-                  <span>Play</span>
-                </button>
-              </div>
-              <div class="demo-card-copy">
-                <p class="demo-index">Demo 02</p>
-                <h3>Mobile</h3>
-                <p>On-device and connected mobile usage scenarios.</p>
-                <span class="mode-tag">Offline + real-time</span>
-              </div>
-            </article>
-
-            <article class="demo-card">
-              <div class="video-placeholder" aria-label="Jetson Orin Nano demonstration coming soon">
-                <span class="play-mark" aria-hidden="true">▶</span>
-                <span>Video coming soon</span>
-              </div>
-              <div class="demo-card-copy">
-                <p class="demo-index">Demo 03</p>
-                <h3>Jetson Orin Nano</h3>
-                <p>Edge deployment under resource-constrained conditions.</p>
-                <span class="mode-tag">Real-time</span>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
       <section id="notes" class="section shell notes" aria-labelledby="notes-title">
         <div>
           <p class="section-number">Artifact notes</p>
@@ -311,7 +309,6 @@
     <footer>
       <div class="shell footer-inner">
         <span>VoiceShield · Anonymous supplementary material</span>
-        <span>No analytics · No external resources</span>
       </div>
     </footer>
   </body>

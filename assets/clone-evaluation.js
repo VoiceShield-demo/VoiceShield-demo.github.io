@@ -50,10 +50,14 @@
 
     data.samples
       .map((id) => model.samples.find((sample) => sample.id === id))
-      .forEach((sample) => {
+      .forEach((sample, displayIndex) => {
         const cell = document.createElement("div");
         cell.className = "clone-cell";
         cell.setAttribute("role", "cell");
+
+        const sampleLabel = document.createElement("div");
+        sampleLabel.className = "clone-sample-label";
+        sampleLabel.textContent = `Sample ${String(displayIndex + 1).padStart(2, "0")}`;
 
         const original = document.createElement("div");
         original.className = "clone-block";
@@ -91,7 +95,7 @@
         delta.textContent =
           `ΔSIM (protected − original): ${fmt(sample.delta)}`;
 
-        cell.append(original, protectedClone, delta);
+        cell.append(sampleLabel, original, protectedClone, delta);
         row.append(cell);
       });
 

@@ -5,7 +5,6 @@ const videoDialogTitle = document.querySelector('#video-dialog-title');
 const videoDialogClose = document.querySelector('#video-dialog-close');
 const videoDialogStatus = document.querySelector('#video-dialog-status');
 const videoOpenButtons = [...document.querySelectorAll('[data-video-src]')];
-const seekableVideoURLs = new Map();
 let videoRequestToken = 0;
 
 for (const player of audioPlayers) {
@@ -49,23 +48,12 @@ function waitForMetadata(player) {
   });
 }
 
-async function loadSeekableVideo(source, requestToken) {
-  let objectURL = seekableVideoURLs.get(source);
-  if (!objectURL) {
-    // Anonymous GitHub's video proxy does not advertise byte-range support.
-    // Downloading once into a Blob gives the native player a local, fully
-    // seekable source instead of a forward-only HTTP response.
-    const response = await fetch(source, { cache: 'force-cache' });
-    if (!response.ok) {
-      throw new Error(`Video download failed (${response.status}).`);
-    }
-    const videoBlob = await response.blob();
-    objectURL = URL.createObjectURL(videoBlob);
-    seekableVideoURLs.set(source, objectURL);
-  }
+async function loadVideo(source, requestToken) {
   if (requestToken !== videoRequestToken || !videoDialog?.open) return;
 
-  videoDialogPlayer.src = objectURL;
+  // GitHub Pages advertises byte-range support, so the native player can
+  // stream and seek without downloading the complete video up front.
+  videoDialogPlayer.src = source;
   videoDialogPlayer.load();
   await waitForMetadata(videoDialogPlayer);
   if (requestToken !== videoRequestToken || !videoDialog?.open) return;
@@ -86,10 +74,10 @@ for (const button of videoOpenButtons) {
     const requestToken = ++videoRequestToken;
     videoDialogPlayer.removeAttribute('src');
     videoDialogPlayer.load();
-    setVideoStatus('Loading the complete video for seekable playback…');
+    setVideoStatus('Loading video…');
     videoDialog.showModal();
     try {
-      await loadSeekableVideo(source, requestToken);
+      await loadVideo(source, requestToken);
     } catch (error) {
       if (requestToken !== videoRequestToken) return;
       setVideoStatus(error instanceof Error ? error.message : 'The video could not be loaded.');
@@ -108,11 +96,4 @@ videoDialog?.addEventListener('close', () => {
   videoDialogPlayer.removeAttribute('src');
   videoDialogPlayer.load();
   setVideoStatus();
-});
-
-window.addEventListener('pagehide', () => {
-  for (const objectURL of seekableVideoURLs.values()) {
-    URL.revokeObjectURL(objectURL);
-  }
-  seekableVideoURLs.clear();
 });
