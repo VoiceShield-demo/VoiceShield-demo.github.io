@@ -26,31 +26,31 @@
           <h2>Abstract</h2>
           <div class="abstract-copy">
             <p>
-              Recent advances in AI voice cloning have made it possible to reproduce a
-              person's voice from only a few seconds of speech, enabling scalable
-              impersonation for fraud, social engineering, misinformation, and other forms
-              of identity abuse. Existing anti-cloning defenses, however, often rely on
-              expensive per-utterance optimization and waveform-level adversarial
-              perturbations. These approaches incur substantial computational cost, making
-              real-time protection impractical, while potentially introducing perceptible
-              artifacts and generalizing poorly to emerging cloning systems.
-              In this paper, we present VoiceShield, a practical and perceptually
-              transparent voice-protection system for both offline and real-time speech. Our
-              key insight is to leverage the structural prior of pretrained generative speech
-              models: rather than perturbing the waveform directly, VoiceShield operates in a
-              compact latent space where modifications are constrained toward
-              speech-supported acoustic structure. A lightweight transformer generates
-              identity-disrupting perturbations in a single forward pass, while an
-              identity-aware soft mask concentrates modifications on features most relevant
-              to speaker identity. We evaluate VoiceShield against seven state-of-the-art
-              defense baselines across ten recent voice-cloning systems spanning both open-
-              and closed-source models. VoiceShield consistently delivers the strongest
-              protection effectiveness and the best perceptual quality among all evaluated
-              defenses, substantially advancing the overall protection-quality trade-off, as
-              confirmed by both objective metrics and our listening study. We further package
-              VoiceShield as deployable software for desktop, mobile, and standalone edge
-              devices, demonstrating low-latency operation and practical integration with
-              existing voice and audio applications.
+              Recent advances in AI voice cloning can reproduce a person's voice from only a
+              few seconds of speech, enabling scalable impersonation, fraud, social
+              engineering, and misinformation. Existing anti-cloning defenses, however,
+              often rely on expensive per-utterance optimization and
+              waveform-/spectrogram-level adversarial perturbations, making them difficult
+              to scale or deploy in real time while potentially degrading perceptual and
+              audio fidelity. In this paper, we present VoiceShield, a practical and
+              perceptually transparent voice-protection system for both recorded and
+              real-time speech. VoiceShield protects speech in the latent space of a
+              pretrained generative speech model, leveraging its structural prior to produce
+              speech-supported identity-disrupting modifications through a frozen decoder.
+              Instead of optimizing each utterance separately, VoiceShield learns a
+              feed-forward latent protector that generates these modifications for unseen
+              speech in a single pass, with an identity-aware soft mask focusing them on
+              speaker-relevant latent features. Building on this design, VoiceShield extends
+              protection to continuously arriving speech through context-aware streaming,
+              overlap-aware rendering, and a lightweight distilled vocoder. An
+              audio-structure-preserving output mechanism further retains the original
+              sampling rate and stereo structure. We evaluate VoiceShield against seven
+              state-of-the-art defenses across ten recent open-source and commercial
+              voice-cloning systems. VoiceShield achieves the strongest overall
+              protection–quality trade-off at substantially lower protection cost than
+              optimization-based defenses, as confirmed by objective metrics and a listening
+              study. We further demonstrate real-time deployment across desktop, mobile, and
+              edge devices.
             </p>
           </div>
         </div>
