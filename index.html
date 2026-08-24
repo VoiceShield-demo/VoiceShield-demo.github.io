@@ -71,54 +71,22 @@
 
           <div class="demo-grid" aria-labelledby="demo-title">
             <article class="demo-card">
-              <div class="video-preview">
-                <video class="demo-video" muted preload="metadata" playsinline aria-hidden="true" tabindex="-1">
-                  <source src="video/desktop-web-demo.mp4?v=web-demo-20260805-3" type="video/mp4" />
-                </video>
-                <button
-                  class="video-open-button"
-                  type="button"
-                  data-video-src="video/desktop-web-demo.mp4?v=web-demo-20260805-3"
-                  data-video-title="Desktop / Web"
-                  aria-haspopup="dialog"
-                  aria-controls="video-dialog"
-                >
-                  <span class="video-play-mark" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" focusable="false">
-                      <path d="M9 6.5 18 12l-9 5.5v-11Z" />
-                    </svg>
-                  </span>
-                  <span>Play</span>
-                </button>
+              <div class="video-placeholder" aria-label="Desktop demonstration coming soon">
+                <span class="play-mark" aria-hidden="true">▶</span>
+                <span>Video coming soon</span>
               </div>
               <div class="demo-card-copy">
                 <p class="demo-index">Demo 01</p>
-                <h3>Desktop / Web</h3>
+                <h3>Desktop</h3>
                 <p>Browser-based listening and live protection workflow.</p>
                 <span class="mode-tag">Offline + real-time</span>
               </div>
             </article>
 
             <article class="demo-card">
-              <div class="video-preview">
-                <video class="demo-video" muted preload="metadata" playsinline aria-hidden="true" tabindex="-1">
-                  <source src="video/mobile-demo.mp4?v=mobile-demo-20260805" type="video/mp4" />
-                </video>
-                <button
-                  class="video-open-button"
-                  type="button"
-                  data-video-src="video/mobile-demo.mp4?v=mobile-demo-20260805"
-                  data-video-title="Mobile"
-                  aria-haspopup="dialog"
-                  aria-controls="video-dialog"
-                >
-                  <span class="video-play-mark" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" focusable="false">
-                      <path d="M9 6.5 18 12l-9 5.5v-11Z" />
-                    </svg>
-                  </span>
-                  <span>Play</span>
-                </button>
+              <div class="video-placeholder" aria-label="Mobile demonstration coming soon">
+                <span class="play-mark" aria-hidden="true">▶</span>
+                <span>Video coming soon</span>
               </div>
               <div class="demo-card-copy">
                 <p class="demo-index">Demo 02</p>
@@ -293,7 +261,7 @@
         <div class="video-dialog-header">
           <div>
             <p>System demonstration</p>
-            <h2 id="video-dialog-title">Desktop / Web</h2>
+            <h2 id="video-dialog-title">Desktop</h2>
           </div>
           <button id="video-dialog-close" class="video-dialog-close" type="button" aria-label="Close video">
             Close <span aria-hidden="true">&times;</span>
