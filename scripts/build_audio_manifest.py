@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rebuild the four-sample, nine-method audio manifest."""
+"""Rebuild the four-sample, ten-method audio manifest."""
 
 from __future__ import annotations
 
@@ -22,6 +22,11 @@ METHODS = [
     ("voiceblock", "VoiceBlock", "sample-{sample}-voiceblock.wav"),
     ("rovo", "RoVo", "sample-{sample}-rovo.wav"),
     ("voiceshield", "VoiceShield", "sample-{sample}-voiceshield.wav"),
+    (
+        "voiceshield_rt",
+        "VoiceShield_RT",
+        "sample-{sample}-voiceshield-rt.wav",
+    ),
 ]
 
 

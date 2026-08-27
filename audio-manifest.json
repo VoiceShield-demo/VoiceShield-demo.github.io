@@ -37,6 +37,10 @@
     {
       "key": "voiceshield",
       "label": "VoiceShield"
+    },
+    {
+      "key": "voiceshield_rt",
+      "label": "VoiceShield_RT"
     }
   ],
   "format": "Mono, 16-bit PCM WAV. Each method retains its native sampling rate and method-produced duration.",
@@ -133,6 +137,16 @@
           "frames": 455280,
           "duration_seconds": 18.97,
           "sha256": "beae35c55e194c43c3c5b4886bcb2abfc3b07194a55aefde6f32e9bf1b5c195f"
+        },
+        "voiceshield_rt": {
+          "path": "audio/sample-01-voiceshield-rt.wav",
+          "bytes": 910638,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 455280,
+          "duration_seconds": 18.97,
+          "sha256": "d5cbf4e667bf6ad4b508c0c4005a276cb8bc524be96a30e16eac51efbce70325"
         }
       }
     },
@@ -228,6 +242,16 @@
           "frames": 581520,
           "duration_seconds": 24.23,
           "sha256": "8e4a1e2cca0b762614118890541691bf0dd71e4fa7a9e26f1b536f6de7be20a4"
+        },
+        "voiceshield_rt": {
+          "path": "audio/sample-02-voiceshield-rt.wav",
+          "bytes": 1163118,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 581520,
+          "duration_seconds": 24.23,
+          "sha256": "363da7ca9911427a1f2a35837cb4772b323863e17b918ee61c04fd3a8fe58bb9"
         }
       }
     },
@@ -323,6 +347,16 @@
           "frames": 437520,
           "duration_seconds": 18.23,
           "sha256": "3a031fea2b4d48d0f120d7eaa575582fba1247ce78750d35eacef7f34f800eec"
+        },
+        "voiceshield_rt": {
+          "path": "audio/sample-03-voiceshield-rt.wav",
+          "bytes": 875118,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 437520,
+          "duration_seconds": 18.23,
+          "sha256": "7530444c3583a20c30e81cbd7c755f109aa7fc053a1a26d4284c58c873e89186"
         }
       }
     },
@@ -418,6 +452,16 @@
           "frames": 361680,
           "duration_seconds": 15.07,
           "sha256": "24134b6334c55e5751ad25322052626b761068f8ac57ec3366d58630b461ea75"
+        },
+        "voiceshield_rt": {
+          "path": "audio/sample-04-voiceshield-rt.wav",
+          "bytes": 723438,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "bit_depth": 16,
+          "frames": 361680,
+          "duration_seconds": 15.07,
+          "sha256": "d92cb3c245f6dab431c8d1442bf304cd358ffaf7495bec70eafa941edbaaeb00"
         }
       }
     }

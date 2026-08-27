@@ -459,6 +459,14 @@ h2 {
   overflow-wrap: anywhere;
 }
 
+.method-id sub {
+  font-family: inherit;
+  font-size: 0.72em;
+  font-weight: inherit;
+  line-height: 0;
+  vertical-align: -0.28em;
+}
+
 .audio-cell {
   display: flex;
   align-items: center;
